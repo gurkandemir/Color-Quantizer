@@ -24,6 +24,6 @@ WHERE
     - **1** for choosing cluster centers by clicking on photo.
     - **2** for choosing cluster centers randomly.
     
-    For example, if you want to quantize \textbf{cat.png} into \textbf{8} colors, by choosing \textbf{random} cluster centers. You have to execute following command: \textbf{python3 colorQuantizer.py cat.png 8 2 }
+    For example, if you want to quantize **cat.png** into **8** colors, by choosing **random** cluster centers. You have to execute following command: \textbf{python3 colorQuantizer.py cat.png 8 2 }
 
 >python3 colorQuantizer.py cat.png 8 2
