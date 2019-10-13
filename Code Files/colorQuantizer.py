@@ -34,13 +34,13 @@ def k_means_algo(img, K, points, width, height):
         
         distances = np.stack(temp, axis = 1)
         # Assignes each pixel to closest cluster.
-        matrix = np.argmin(distances, axis=1)
+        assigned_clusters = np.argmin(distances, axis=1)
 
         # Finds clusters' new R, G, B values.
         for i in range(0, K):
-            cluster_values[i] = np.mean(pixels[matrix == i], axis = 0)
+            cluster_values[i] = np.mean(pixels[assigned_clusters == i], axis = 0)
 
-    return Image.fromarray(cluster_values[matrix].reshape(height,width, -1).astype('uint8'), 'RGB')
+    return Image.fromarray(cluster_values[assigned_clusters].reshape(height,width, -1).astype('uint8'), 'RGB')
 
 ##
 # Method in order to decide cluster's initial points.
